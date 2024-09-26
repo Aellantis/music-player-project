@@ -159,35 +159,5 @@ function play (){
             console.log ("Please enter a valid input. ")
             break;
     }
-    let skipping = prompt (`Do you want to skip this song? yes/no `)
-    if (skipping === 'yes'.toLowerCase()){
-        skip ()
-    } else {
-        return;
     }
     }
-
-}
-
-function skip(){
-    if (max_number === 1) {
-        console.log("You have no songs to skip to.")
-        return;
-    } if (`Now playing: ${song_list[0]}` && song_list.length > 0){
-        console.log (`Skipped to ${song_list[1]}`)
-        let skip_again = prompt(`Do you want to skip this song too? yes/no `)
-        if (skip_again === 'yes'.toLowerCase()){
-                console.log (`Skipped to ${song_list[1]}`)
-        } else {
-            console.log(`Okay, enjoy 'listening' to ${song_list[0]}!`)
-        } if (`Now playing: ${song_list[1]}` && song_list.length > 0){
-            skip_again= prompt(`Do you want to skip this song too? yes/no `)
-            if (skip_again === `yes`.toLowerCase()&& song_list[1]!== undefined){
-                console.log (`Skipped to ${song_list[2]}`)
-        } else {
-            console.log(`Okay, enjoy 'listening' to ${song_list[1]}!`)
-
-        }
-    }
-}
-}
